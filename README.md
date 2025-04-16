@@ -26,9 +26,6 @@
 - 🔗 [LinkedIn](https://www.linkedin.com/in/ahmet-fatih-sahin-9bb20518a/)  
 - 🌐 [Personal Website (coming soon)](https://ahmetfths.github.io)
 
-## 😄 Pronouns
-He/Him
-
 ## ⚡ Fun Fact
 I can dock billions of molecules before my coffee gets cold ☕  
 Also secretly working on an AI sidekick for molecule matchmaking... stay tuned!
