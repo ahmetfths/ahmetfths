@@ -6,7 +6,7 @@
 
 ## 👀 Interests
 - Deep learning for drug discovery (e.g., QSAR, binding prediction, molecule generation)
-- Virtual screening & molecular docking (e.g., Schrödinger, DeepDocking, Glide, Qvina)
+- Virtual screening & molecular docking (e.g., Glide, Autodock)
 - Molecular dynamics & free energy calculations
 - Building in silico tools for rapid screening and compound prioritization
 - Exploring the intersection of **pharmacology, AI, and software development**
