@@ -1,6 +1,6 @@
 # 👋 Hi, I’m Ahmet Fatih Şahin (@ahmetfths)
 
-🎓 I'm a pharmacist and a Ph.D. candidate in Computer-Aided Drug Discovery and Development.  
+🎓 I'm a pharmacist and a Ph.D. in Computer-Aided Drug Discovery and Development.  
 🧪 I specialize in **AI-driven molecular modeling**, **virtual screening**, and **ADMET filtering** for identifying promising drug candidates.  
 🌍 I've conducted TÜBİTAK-funded research in Germany and collaborated with international teams on cutting-edge drug discovery projects.
 
