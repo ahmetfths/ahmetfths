@@ -1,31 +1,73 @@
-# 👋 Hi, I’m Ahmet Fatih Şahin (@ahmetfths)
+# React + TypeScript + Vite
 
-🎓 I'm a pharmacist and a Ph.D. in Computer-Aided Drug Discovery and Development.  
-🧪 I specialize in **AI-driven molecular modeling**, **virtual screening**, and **ADMET filtering** for identifying promising drug candidates.  
-🌍 I've conducted TÜBİTAK-funded research in Germany and collaborated with international teams on cutting-edge drug discovery projects.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 👀 Interests
-- Deep learning for drug discovery (e.g., QSAR, binding prediction, molecule generation)
-- Virtual screening & molecular docking (e.g., Glide, Autodock)
-- Molecular dynamics & free energy calculations
-- Building in silico tools for rapid screening and compound prioritization
-- Exploring the intersection of **pharmacology, AI, and software development**
+Currently, two official plugins are available:
 
-## 🌱 Currently Learning
-- Large-scale ADMET filtering using ML models  
-- Web-based molecular tools (Flask, React, Python backends)
-- Local LLMs integration for molecule insights (e.g., Ollama)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🤝 Open to Collaborations On
-- AI-powered drug screening platforms  
-- Academic or industry-driven virtual screening projects  
-- Tools that enhance **explainability in drug design**
+## React Compiler
 
-## 📫 How to Reach Me
-- ✉️ [fatihsahincadd@gmail.com](mailto:fatihsahincadd@gmail.com)  
-- 🔗 [LinkedIn](https://www.linkedin.com/in/ahmet-fatih-sahin-9bb20518a/)  
-- 🌐 [Personal Website (coming soon)](https://ahmetfths.github.io)
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## ⚡ Fun Fact
-I can dock billions of molecules before my coffee gets cold ☕  
-Also secretly working on an AI sidekick for molecule matchmaking... stay tuned!
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
